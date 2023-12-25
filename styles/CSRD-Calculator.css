@@ -1,0 +1,153 @@
+.CSRD-CalculatorRelativ{
+    position: relative;
+    width: 83.5vw;
+    border: 2px solid #D9D9D9;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top:25%;
+    min-height: 150px;
+}
+
+.CSRD-Form{
+    position:relative;
+    height: fit-content;
+}
+
+.AnswersBlock{
+    position: relative;
+    height: fit-content;
+}
+
+.retryButton{
+    display: none;
+    position: relative;
+    background-color: #fff;
+    width: 12vw;
+    min-width: 80px;
+    height: 2rem;
+    margin-top: 10px;
+    margin-right: 15px;
+    left: 30vw;
+    border: 2px solid #C1F036;
+    border-radius: 10px;
+}
+
+.retryButton.active{
+    display: block;
+}
+
+.retryButton.active:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #979a92;
+}
+
+
+
+
+
+
+
+.question{
+    display: none;
+}
+.question.active{
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 18px;
+    padding-left: 30px;
+}
+
+.answer{
+    position: relative;
+    display: none;
+    font-weight: bold;
+    font-size: 20px;
+    height: fit-content;
+    align-items: center;
+    margin: 10px;
+}
+
+.answer.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.buttonsBlock{
+    position: relative;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+}
+
+.buttonBack.active{
+    display: block;
+    background-color: #fff;
+    border: 2px solid #c0d7bd;
+    border-radius: 17px;
+    width: 2rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+#back{
+    height: 1.2rem;
+    width: 1.2rem;
+    position: relative;
+    top:-2px;
+    left: -1px;
+}
+
+.buttonBack.active:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #979a92;
+}
+
+.buttonBack{
+    display: none;
+}
+
+
+.answerButton{
+    background-color: #fff;
+    width: 12vw;
+    min-width: 80px;
+    height: 2rem;
+    border: 2px solid #C1F036;
+    border-radius: 10px;
+    margin-right: 2.5vw;
+    margin-left: 2.5vw;
+}
+
+.answerButton.hidden{
+    display: none;
+}
+
+.answerButton:hover{
+    cursor:pointer;
+    box-shadow: 2px 2px 2px #979a92;
+}
+
+
+
+
+@media screen and (max-width:900px) {
+    .CSRD-CalculatorRelativ{
+        min-height: 200px;
+        height:fit-content;
+    }
+}
+
+
+
+@media screen and (max-width:490px) {
+    .answer{
+        padding: 15px;
+    }
+}

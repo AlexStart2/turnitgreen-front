@@ -1,0 +1,127 @@
+
+
+.Blog{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap: wrap;
+    height: fit-content;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 110px;
+}
+
+p{
+  margin-bottom: 0;
+}
+
+.Articles:hover{
+  box-shadow: 10px 10px 50px #5a5e52;
+  cursor: pointer;
+}
+
+.Articles {
+    width: calc(33.33% - 6.1vw);
+    height: 500px;
+    margin: 1vw;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #C1F036;
+    border-radius: 2%;
+    max-width: 400px;
+    min-width: 300px;
+
+    display: flex;
+    flex-direction: column; 
+  }
+
+  .ArticlesImages {
+    height: 100%;
+    width: 994px;;
+  }
+  
+
+  
+
+  
+  .Title {
+    padding: 1%;
+    padding-left: 4%;
+    padding-right: 3%;
+    font-size: 19px;
+    font-family: Arial;
+    font-weight: bold;
+  }
+  
+  .Content {
+    margin-left: 13px;
+    margin-right: 13px;
+    margin-top: 4px;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+
+
+  
+  .ContentDate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    padding-left: 4%;
+  }
+
+  
+  
+  .img-container {
+    height: 50%;
+    margin-top: 20px;
+  }
+  
+
+.ArticleCardText{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 190px;
+}
+
+
+
+
+@media screen and (max-width:1112px) {
+  .Articles{
+      width: calc(50% - 8vw);
+      margin: 2vw;
+  }
+
+}
+
+
+@media screen and (max-width: 744px) {
+  .Articles {
+    flex: 0 1 calc(100% - 20px);
+    min-width: 350px;
+    height: 500px;
+  }
+}
+
+
+@media screen and (max-width:680px){
+  .Articles{
+      width: calc(90%);
+      margin: 3vw;
+  }
+}
