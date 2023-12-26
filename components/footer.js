@@ -1,7 +1,7 @@
-import './footer.css';
+import styles from '@/styles/footer.module.css';
 import React from 'react';
 import NavLink from './NavLink';
-import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 function Footer() {
@@ -9,10 +9,10 @@ function Footer() {
 
   return (
     <>
-      <div className='footer'>
+      <div className={styles.footer}>
 
-        <div className='cmp-footer'>
-          <div className='Copyright'>
+        <div className={styles.cmp_footer}>
+          <div className={styles.Copyright}>
 
             Copyright © 2023 by Turn it green<br/><br/>
             Regulatory information on this website is provided "as is" 
@@ -21,10 +21,10 @@ function Footer() {
             for the accuracy, completeness, or timeliness of any regulatory 
             information.
           </div>
-          <NavLink to='/cookies-policy' className={'footElements'}>Cookies</NavLink>
-          <NavLink to='/disclaimer' className={'footElements'}>Disclaimer</NavLink>
-          <NavLink to='/impressum' className={'footElements'}>Impresum</NavLink>
-          <NavLink to='./sources' className={'footElements'}>Sources</NavLink>
+          <NavLink to='/cookies-policy' className={styles.footElements}>Cookies</NavLink>
+          <NavLink to='/disclaimer' className={styles.footElements}>Disclaimer</NavLink>
+          <NavLink to='/impressum' className={styles.footElements}>Impresum</NavLink>
+          <NavLink to='./sources' className={styles.footElements}>Sources</NavLink>
         </div>
       </div>
     </>

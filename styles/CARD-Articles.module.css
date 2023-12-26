@@ -13,9 +13,9 @@
     margin-bottom: 110px;
 }
 
-p{
+/* p{
   margin-bottom: 0;
-}
+} */
 
 .Articles:hover{
   box-shadow: 10px 10px 50px #5a5e52;
@@ -84,7 +84,7 @@ p{
 
   
   
-  .img-container {
+  .img_container {
     height: 50%;
     margin-top: 20px;
   }

@@ -1,41 +1,42 @@
-'use client'
-
-import './navbar.css';
-import React from 'react';
-import logo from './Teal Illustrated Iceberg Graph Concept Map Graph.png';
+import styles from '@/styles/navbar.module.css';
+import React, { useState } from 'react';
+import logo from '@/public/Teal Illustrated Iceberg Graph Concept Map Graph.png';
 import Image from 'next/image';
-import menuSVG from '@/app/Images/menu-outline.svg';
+import menuSVG from '@/public/menu-outline.svg';
 import NavLink from './NavLink';
 import { useRouter } from 'next/navigation';
 import 'bootstrap/dist/css/bootstrap.css';
 
-
 function NavigationBar() {
+  const router = useRouter();
+  const [isMobileMenuActive, setMobileMenuActive] = useState(false);
 
-  const router=useRouter();
-
-  const NavBarMobile = () => {
-    let o = document.getElementById('nav-opt').classList;
-    if (o.value === 'navbar-options') {
-      o.add('active');
-    } else {
-      o.remove('active');
-    }
-  }
+  const toggleMobileMenu = () => {
+    setMobileMenuActive(!isMobileMenuActive);
+    console.log(document.getElementById('nav-opt').classList);
+  };
 
   return (
     <>
-      <div className='navbar'>
-        <div className='navbar-general'>
-          <NavLink to='/' ><Image src={logo} alt="Turn it Green" className={'logotip'} /></NavLink>
-          <div id='nav-opt' className='navbar-options'>
-            <NavLink to='/' className={'navbar-button'}>Home</NavLink>
-            <NavLink to='/ESG-knowledge' className={'navbar-button'}>ESG Knowledge</NavLink>
-            <NavLink to='/ESG-updates' className={'navbar-button'}>ESG Updates</NavLink>
-            <NavLink to='/Search' className={'navbar-button'}>Search</NavLink>
-            <div className={'navbar-button last'}><button className='GetInTouchButton' onClick={() => router.push('/about-us')}>Get in Touch</button></div>
+      <div className={styles.navbar}>
+        <div className={styles.navbar_general}>
+          <NavLink to='/'>
+            <Image src={logo} alt="Turn it Green" className={styles.logotip} />
+          </NavLink>
+          <div id='nav-opt' className={`${isMobileMenuActive ?styles.navbar_options_active: styles.navbar_options}`}>
+            <NavLink to='/' className={styles.navbar_button}>Home</NavLink>
+            <NavLink to='/ESG-knowledge' className={styles.navbar_button}>ESG Knowledge</NavLink>
+            <NavLink to='/ESG-updates' className={styles.navbar_button}>ESG Updates</NavLink>
+            <NavLink to='/Search' className={styles.navbar_button}>Search</NavLink>
+            <div className={styles.navbar_button_last}>
+              <button className={styles.GetInTouchButton} onClick={() => router.push('/about-us')}>
+                Get in Touch
+              </button>
+            </div>
           </div>
-          <button onClick={() => { NavBarMobile() }} className='MenuButton'><Image src={menuSVG} alt='menuButton' className={'menu'} /></button>
+          <button onClick={toggleMobileMenu} className={styles.MenuButton}>
+            <Image src={menuSVG} alt='menuButton' className={styles.menu} />
+          </button>
         </div>
       </div>
     </>
@@ -43,3 +44,4 @@ function NavigationBar() {
 }
 
 export default NavigationBar;
+

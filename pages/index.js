@@ -3,16 +3,16 @@ import React from 'react';
 import StartImage from '@/public/HomePageImage.png';
 import Image from 'next/image';
 import 'bootstrap/dist/css/bootstrap.css';
-// import { GetArticles } from './components/getArticles';
+import { GetArticles } from '@/components/getArticles';
 // import { CSRDcalculator } from './components/CSRD-Calculator';
-// import CardArticle from './components/CARD-Articles';
+import CardArticle from '@/components/CARD-Articles';
 
 
 
 
 function Home() {
 
-  // const RecentArticles = GetArticles().slice(0, 6);
+  const RecentArticles = GetArticles().slice(0, 6);
 
   return (
     <>
@@ -42,7 +42,7 @@ function Home() {
         <div className={styles.Recent}>
           <div className={styles.T_Recent}>Recent</div>
           <div className={styles.Blog}>
-            {/* <CardArticle Articles={RecentArticles} /> */}
+            <CardArticle Articles={RecentArticles} />
           </div>
         </div>
       </div>

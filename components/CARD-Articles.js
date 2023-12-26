@@ -1,11 +1,9 @@
-"use client"
-
 import { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { formatDate } from './formatDate';
 import { useRouter } from 'next/navigation';
-import loading from '../Images/loading.gif';
-import './CARD-Articles.css';
+import loading from '@/public/loading.gif';
+import styles from '@/styles/CARD-Articles.module.css';
 import Image from 'next/image';
 
 function CardArticle({ Articles }) {
@@ -30,33 +28,33 @@ function CardArticle({ Articles }) {
     return (
         <>
             {(Articles.length === 0 || typeof Articles === "undefined") ? (
-                <Image src={loading} alt="Loading..." className="loadingArticles" />
+                <Image src={loading} alt="Loading..." className={styles.loadingArticles} />
             ) : (
                 Articles.map((data) => {
                     return (
                         <div
                             key={data._id}
-                            className="Articles"
+                            className={styles.Articles}
                             onClick={() => router.push(`/article/${data._id}`)}
                         >
-                            <div className="img-container">
+                            <div className={styles.img_container}>
                                 <Image
-                                    className="ArticlesImages"
+                                    className={styles.ArticlesImages}
                                     src={`https://drive.google.com/uc?id=${data.ImageId}`}
                                     alt={data.Title}
                                     width={994}
                                     height={248}
                                 />
                             </div>
-                            <div className="ArticleCardText">
-                                <h1 className="Title">{data.Title}</h1>
+                            <div className={styles.ArticleCardText}>
+                                <h1 className={styles.Title}>{data.Title}</h1>
                                 <div
-                                    className="Content"
+                                    className={styles.Content}
                                     id={data._id}
                                     dangerouslySetInnerHTML={{ __html: data.Content + "..." }}
                                 ></div>
                             </div>
-                            <div className="ContentDate">{formatDate(data.createdAt)}</div>
+                            <div className={styles.ContentDate}>{formatDate(data.createdAt)}</div>
                         </div>
                     );
                 })
