@@ -1,33 +1,15 @@
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import ESG_Image from '@/public/ESGKnowledge.png';
 import CardArticle from '@/components/CARD-Articles';
 import Image from 'next/image';
 import styles from '@/styles/ESG-pages.module.css';
+import { GetArticles } from '@/components/getArticles';
 
 
 
 function ESGKnowledge() {
-    function GetArticles() {
-
-        const [allArticles, setAllArticles] = useState([]);
-      
-        async function getArticle() {
-           fetch('https://turnitgreen-03e15fdc97d7.herokuapp.com/get-all-articles', {
-            method: "GET",
-      
-          }).then((res) => res.json()).then((data) => {
-            setAllArticles(data.data)
-          })
-        }
-        useEffect(() => {
-          getArticle();
-        }, []);
-      
-      
-        return allArticles;
-      }
 
       const Articles= GetArticles();
     const ESG_Knowledge_Articles = Articles.filter((article) => {

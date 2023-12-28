@@ -11,7 +11,7 @@ import { useRouter } from 'next/router';
 
 export async function getStaticPaths() {
     // Fetch the list of article IDs from your API
-    const response = await fetch('http://localhost:5000/get-article-ids');
+    const response = await fetch('https://turnitgreen-03e15fdc97d7.herokuapp.com/get-article-ids');
     const { status, data, message } = await response.json();
   
     if (status === 'ok') {
@@ -37,7 +37,7 @@ export async function getStaticPaths() {
     const { articleId } = params;
   
     // Fetch article data from your API based on the articleId
-    const response = await fetch(`http://localhost:5000/get-article/${articleId}`);
+    const response = await fetch(`https://turnitgreen-03e15fdc97d7.herokuapp.com/get-article/${articleId}`);
     const { status, data, message } = await response.json();
   
     if (status === "ok") {
