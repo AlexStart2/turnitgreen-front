@@ -4,7 +4,7 @@ import StartImage from '@/public/HomePageImage.png';
 import Image from 'next/image';
 import 'bootstrap/dist/css/bootstrap.css';
 import { GetArticles } from '@/components/getArticles';
-// import { CSRDcalculator } from './components/CSRD-Calculator';
+import { CSRDcalculator } from '@/components/CSRD-Calculator';
 import CardArticle from '@/components/CARD-Articles';
 
 
@@ -35,7 +35,7 @@ function Home() {
           <div className={styles.Title_CSRD}>
             <h1 className={styles.CSRD_Title}>CSRD/ESRS eligibility calculator</h1>
           </div>
-          {/* <CSRDcalculator /> */}
+          <CSRDcalculator />
         </div>
 
 

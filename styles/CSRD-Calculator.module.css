@@ -1,4 +1,4 @@
-.CSRD-CalculatorRelativ{
+.CSRD_CalculatorRelativ{
     position: relative;
     width: 83.5vw;
     border: 2px solid #D9D9D9;
@@ -10,7 +10,7 @@
     min-height: 150px;
 }
 
-.CSRD-Form{
+.CSRD_Form{
     position:relative;
     height: fit-content;
 }
@@ -21,7 +21,7 @@
 }
 
 .retryButton{
-    display: none;
+    display: block;
     position: relative;
     background-color: #fff;
     width: 12vw;
@@ -34,11 +34,8 @@
     border-radius: 10px;
 }
 
-.retryButton.active{
-    display: block;
-}
 
-.retryButton.active:hover{
+.retryButton:hover{
     cursor: pointer;
     box-shadow: 2px 2px 2px #979a92;
 }
@@ -49,10 +46,7 @@
 
 
 
-.question{
-    display: none;
-}
-.question.active{
+.question_active{
     display: block;
     font-weight: bold;
     font-size: 20px;
@@ -68,13 +62,11 @@
     height: fit-content;
     align-items: center;
     margin: 10px;
-}
-
-.answer.active{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 
 
 .buttonsBlock{
@@ -86,7 +78,7 @@
     height: fit-content;
 }
 
-.buttonBack.active{
+.buttonBack{
     display: block;
     background-color: #fff;
     border: 2px solid #c0d7bd;
@@ -96,7 +88,7 @@
     align-items: center;
     justify-content: center;
 }
-#back{
+.back{
     height: 1.2rem;
     width: 1.2rem;
     position: relative;
@@ -104,14 +96,11 @@
     left: -1px;
 }
 
-.buttonBack.active:hover{
+.buttonBack:hover{
     cursor: pointer;
     box-shadow: 2px 2px 2px #979a92;
 }
 
-.buttonBack{
-    display: none;
-}
 
 
 .answerButton{
@@ -138,7 +127,7 @@
 
 
 @media screen and (max-width:900px) {
-    .CSRD-CalculatorRelativ{
+    .CSRD_CalculatorRelativ{
         min-height: 200px;
         height:fit-content;
     }

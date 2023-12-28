@@ -1,0 +1,49 @@
+
+p{
+    margin-bottom: 0;
+}
+
+h2{
+    width: 80%;
+    padding: 3vw;
+}
+
+.ArticlePageContent a{
+    word-wrap: break-word;
+}
+
+
+ul{
+    position: relative;
+    left: -30px;
+}
+
+ol{
+    position: relative;
+    left: -30px;
+}
+
+li{
+    padding-right: 0;
+}
+
+.ArticlePageContent td{
+    border: #000 solid 1px;
+    padding: 3px;
+}
+.ArticlePageContent table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table{
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+}
+
+@media screen and (max-width:980px) {
+    h2{
+        width: 90%;
+    }
+}

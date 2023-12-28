@@ -1,0 +1,71 @@
+.StartPage{
+    position: relative;
+}
+
+.position-relative-search{
+    overflow: hidden;
+    position: relative;
+    height: auto;
+    min-height: 150px;
+    width: 100%;
+}
+
+.SearchImage{
+    width: 100%;
+    height: auto;
+    min-height: 150px;
+    position: relative;
+}
+
+.SearchFunction{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+    z-index: 5;
+}
+
+.SearchBar{
+    display: flex;
+    border: 3px solid #C1F036;
+    border-radius: 17px;
+}
+
+.search{
+    width: 75vw;
+    height: 8vh;
+    border: none;
+    border-radius: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+    margin-left: 1vw;
+}
+
+.search:focus{
+    outline: none;
+    border: none;
+}
+
+.SearchIcon{
+    background: #C1F036;
+    height: 8vh;
+    width: 9vh;
+    padding: 1vh;
+    padding-left: 1.5vh;
+    border: none;
+    border-radius:14px;
+}
+
+.Blog{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap: wrap;
+    height: fit-content;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 110px;
+}

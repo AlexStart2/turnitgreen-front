@@ -1,0 +1,22 @@
+
+.disclaimer_box{
+    display: flex;
+    flex-direction: column;
+    padding: 3vw;
+    padding-bottom: 5vw;
+    justify-content: center;
+    align-items: center;
+}
+.disclaimer_content{
+    width: 80%;
+    height: auto;
+    border: 2px solid #D9D9D9;
+    padding: 3%;
+    border-radius: 20px;
+}
+
+@media screen and (max-width:980px) {
+    .disclaimer_content{
+        width: 90%;
+    }
+}

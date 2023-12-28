@@ -1,0 +1,160 @@
+.ArticlePage{
+    position: relative;
+}
+.ArticlePageImage{
+    width: 100%;
+    height: auto;
+}
+.ArticlePageTitle{
+    position: relative;
+    top: 50px;
+    width: 100%;
+    height: 100px;
+    border-bottom: 3px solid #C1F036;
+    border-top: 3px solid #C1F036;
+    margin-bottom: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ArticleTitle{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.DisplayArticleFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+}
+
+.ArticlePageTime{
+    border: 2px solid #C1F036;
+    height: 30px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-left: 7vw;
+    margin-right: 7vw;
+}
+
+.ArticlePageContent{
+    position: relative;
+    width: 50vw;
+    text-align: left;
+}
+
+.ArticlePageContent a{
+    word-wrap: break-word;
+}
+
+.ArticlePageContent li{
+    position: relative;
+    left: 20px;
+    padding-right: 20px;
+}
+
+.ArticlePageContent td{
+    border: #000 solid 1px;
+    padding: 3px;
+}
+
+
+
+.CKEditor li{
+    margin-left: 15px;
+}
+
+.ArticleEnd{
+    width: 50vw;
+    border: none; /* Remove default border styles */
+    border-top: 3px solid #C1F036; 
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.ToSource{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #C1F036;
+    border-radius: 10px;
+    height: 30px;
+    width: 100px;
+    font-weight: bold;
+}
+
+
+.ToSource:hover{
+    box-shadow: 2px 2px 2px #979a92;
+}
+
+.option_btn_container{
+    position: relative;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.share_btn_container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+}
+
+.share_btn_container img{
+    height: 40px;
+    width: 40px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+  }
+
+@media screen and (max-width:1100px) {
+    .ArticleEnd{
+        width: 85vw;
+    }
+    .ArticlePageContent{
+        width: 85vw;
+        top: 50px;
+        margin-bottom: 80px;
+        text-align: justify;
+    }
+    .ArticlePageTime{
+        position: absolute;
+        left: 0;
+    }
+    .ArticlePageTitle{
+        height: fit-content;
+        top: 20px;
+    }
+    .ArticleTitle{
+        font-size: 4vw;
+    }
+    .DisplayArticleFlex{
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        top: -30px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .ArticleTitle{
+        font-size: 22px;
+    }
+
+    .ArticlePageTime{
+        font-size: 15px;
+    }
+}
