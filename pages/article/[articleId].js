@@ -78,7 +78,7 @@ function Article({ articleData }) {
       </Head>
   
         <div key={articleData._id} className={styles.ArticlePage}>
-          <Image className={styles.ArticlePageImage} height={750} width={1500} src={`https://drive.google.com/uc?id=${articleData.ImageId}`} alt={articleData.Title} />
+          <img className={styles.ArticlePageImage} src={`https://drive.google.com/uc?id=${articleData.ImageId}`} alt={articleData.Title} />
           <div className={styles.ArticlePageTitle}>
             <p className={styles.ArticleTitle}>{articleData.Title}</p>
           </div>

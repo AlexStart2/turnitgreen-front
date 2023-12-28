@@ -38,7 +38,7 @@ function CardArticle({ Articles }) {
                             onClick={() => router.push(`/article/${data._id}`)}
                         >
                             <div className={styles.img_container}>
-                                <Image
+                                <img
                                     className={styles.ArticlesImages}
                                     src={`https://drive.google.com/uc?id=${data.ImageId}`}
                                     alt={data.Title}
