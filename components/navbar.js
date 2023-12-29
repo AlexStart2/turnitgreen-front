@@ -13,7 +13,6 @@ function NavigationBar() {
 
   const toggleMobileMenu = () => {
     setMobileMenuActive(!isMobileMenuActive);
-    console.log(document.getElementById('nav-opt').classList);
   };
 
   return (
@@ -21,7 +20,7 @@ function NavigationBar() {
       <div className={styles.navbar}>
         <div className={styles.navbar_general}>
           <NavLink to='/'>
-            <Image src={logo} alt="Turn it Green" className={styles.logotip} />
+            <Image src={logo} priority={true} alt="Turn it Green" className={styles.logotip} />
           </NavLink>
           <div id='nav-opt' className={`${isMobileMenuActive ?styles.navbar_options_active: styles.navbar_options}`}>
             <NavLink to='/' className={styles.navbar_button}>Home</NavLink>

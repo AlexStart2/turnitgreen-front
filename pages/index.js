@@ -18,7 +18,7 @@ function Home() {
     <>
 
       <div className={styles.StartPage}>
-        <Image src={StartImage} className={styles.StartImage} alt='HomeImage' />
+        <Image src={StartImage} className={styles.StartImage} priority={true} alt='HomeImage' />
         <div className={styles.ShortIntroduction}>
           <h1 className={styles.TurnItGreen}>Turn<span className={styles.It}>It</span><span className={styles.Green}>Green</span></h1><br />
           Stay ahead of the curve with expert insights on the latest ESG developments.

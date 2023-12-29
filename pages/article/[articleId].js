@@ -45,7 +45,7 @@ export async function getStaticPaths() {
         props: {
           articleData: data,
         },
-        revalidate: 600, // Automatically re-render every 60 seconds
+        revalidate: 600, // Automatically re-render every 600 seconds
       };
     } else {
       return {
@@ -58,8 +58,7 @@ export async function getStaticPaths() {
 
 function Article({ articleData }) {
     const router=useRouter();
-    const postUrl = encodeURI(router.asPath);
-  
+    const postUrl = encodeURI("https://turnitgreen.eu"+router.asPath);
     return (
       <>
   
@@ -78,7 +77,7 @@ function Article({ articleData }) {
       </Head>
   
         <div key={articleData._id} className={styles.ArticlePage}>
-          <img className={styles.ArticlePageImage} src={`https://drive.google.com/uc?id=${articleData.ImageId}`} alt={articleData.Title} />
+          <Image width={4000} height={1000} priority={true} className={styles.ArticlePageImage} src={`https://drive.google.com/uc?id=${articleData.ImageId}`} alt={articleData.Title} />
           <div className={styles.ArticlePageTitle}>
             <p className={styles.ArticleTitle}>{articleData.Title}</p>
           </div>

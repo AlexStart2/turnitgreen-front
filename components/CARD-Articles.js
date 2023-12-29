@@ -28,7 +28,7 @@ function CardArticle({ Articles }) {
     return (
         <>
             {(Articles.length === 0 || typeof Articles === "undefined") ? (
-                <Image src={loading} alt="Loading..." className={styles.loadingArticles} />
+                <Image src={loading} alt="Loading..." className={styles.loadingArticles} priority={false} />
             ) : (
                 Articles.map((data) => {
                     return (
@@ -38,12 +38,13 @@ function CardArticle({ Articles }) {
                             onClick={() => router.push(`/article/${data._id}`)}
                         >
                             <div className={styles.img_container}>
-                                <img
+                                <Image
                                     className={styles.ArticlesImages}
                                     src={`https://drive.google.com/uc?id=${data.ImageId}`}
                                     alt={data.Title}
-                                    width={994}
-                                    height={248}
+                                    width={4000}
+                                    height={1000}
+                                    priority={false}
                                 />
                             </div>
                             <div className={styles.ArticleCardText}>

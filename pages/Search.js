@@ -38,9 +38,7 @@ function Search() {
     <>
 
       <div className={styles.StartPage}>
-        {/* <figure className='position-relative-search'> */}
-          <Image src={SearchImage} className={styles.SearchImage} alt='SearchImage' />
-        {/* </figure> */}
+          <Image src={SearchImage} className={styles.SearchImage} priority={true} alt='SearchImage' />
       </div>
 
 
@@ -54,7 +52,7 @@ function Search() {
             onChange={LookFor}
             className={styles.search}
           />
-          <Image src={searchIncon} alt='Search' className={styles.SearchIcon} />
+          <Image src={searchIncon} priority={false} alt='Search' className={styles.SearchIcon} />
         </div>
       </div>
 
