@@ -89,6 +89,8 @@
     width: 85vw;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
+    height: fit-content;
+    max-height: 50px;
 }
 
 .Recent{
@@ -108,10 +110,6 @@
     width: fit-content;
 }
 
-
-@media screen and (max-width:1115px) {
-    /* Short introduction */
-}
 
 @media screen and (max-width:1000px) {
     .ShortIntroduction{
