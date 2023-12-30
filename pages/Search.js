@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { GetArticles } from '@/components/getArticles';
 import SearchImage from '@/public/SearchPage.png';
 import searchIncon from '@/public/SearchIcon.png';
-import loading from '@/public/loading.gif';
 import CardArticle from '@/components/CARD-Articles';
 
 
@@ -38,7 +37,10 @@ function Search() {
     <>
 
       <div className={styles.StartPage}>
+        <div className={styles.SearchImgRelative}>
           <Image src={SearchImage} className={styles.SearchImage} priority={true} alt='SearchImage' />
+        </div>
+
       </div>
 
 
@@ -59,8 +61,8 @@ function Search() {
 
       <div className={styles.Blog}>
 
-        {Articles.length === 0 || typeof Articles === 'undefined' ? <Image src={loading} alt='Loading...' className={styles.loadingArticles} /> :
-          searchQuery ? <CardArticle Articles={Display}/> : <CardArticle Articles={Articles} />}
+        {Articles.length === 0 || typeof Articles === 'undefined' ? <div className={styles.custom_loader}></div> :
+          searchQuery ? <CardArticle Articles={Display} /> : <CardArticle Articles={Articles} />}
       </div>
 
     </>
