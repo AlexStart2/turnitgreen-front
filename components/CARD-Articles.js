@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { formatDate } from './formatDate';
 import { useRouter } from 'next/navigation';
-import loading from '@/public/loading.gif';
 import styles from '@/styles/CARD-Articles.module.css';
 import Image from 'next/image';
 
@@ -38,7 +37,7 @@ function CardArticle({ Articles }) {
                             onClick={() => router.push(`/article/${data._id}`)}
                         >
                             <div className={styles.img_container}>
-                                <img
+                                <Image
                                     className={styles.ArticlesImages}
                                     src={`https://drive.google.com/uc?id=${data.ImageId}`}
                                     alt={data.Title}
