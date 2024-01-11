@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { GetArticles } from '@/components/getArticles';
 import { CSRDcalculator } from '@/components/CSRD-Calculator';
 import CardArticle from '@/components/CARD-Articles';
+import Head from 'next/head';
 
 
 
@@ -16,6 +17,13 @@ function Home() {
 
   return (
     <>
+
+    <Head>
+    <meta name="description" content="Stay ahead of the curve with expert insights on the latest ESG developments.
+          Our dedicated team of experts is your compass through the intricate regulatory
+          landscape. We're committed to making a positive impact on the business world
+          by helping companies navigate and understand the complex realm of ESG." />
+    </Head>
 
       <div className={styles.StartPage}>
         <Image src={StartImage} className={styles.StartImage} priority={true} alt='HomeImage' />
