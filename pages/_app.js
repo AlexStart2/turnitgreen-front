@@ -8,6 +8,7 @@ export default function App({ Component, pageProps }) {
       <Head>
         <link rel="shortcut icon" href='/icon_turnitgreen.png'/>
         <link rel="apple-touch-icon" href="/icon_turnitgreen.png" />
+        <meta name="robots" content="index, follow" />
         <title>Turn it Green</title>
       </Head>
       <Layout>
