@@ -7,6 +7,7 @@ import facebookIcon from '@/public/icons8-facebook-100.png';
 import twitterIcon from '@/public/icons8-twitterx-100.png';
 import linkedInIcon from '@/public/icons8-linkedin-100.png';
 import { useRouter } from 'next/router';
+//import sitemap from '@/sitemap.xml';
 
 
 export async function getStaticPaths() {
@@ -46,6 +47,11 @@ export async function getStaticPaths() {
           articleData: data,
         },
         revalidate: 600, // Automatically re-render every 600 seconds
+        sitemap: {
+          // Add the sitemap property to the returned object
+          paths: ['/'], // Include the base URL in the sitemap
+          // You can also specify other dynamic pages to include here
+        }
       };
     } else {
       return {

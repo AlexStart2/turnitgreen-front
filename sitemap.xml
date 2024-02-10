@@ -1,0 +1,9 @@
+import { generateSitemap } from 'next-sitemap';
+
+const sitemap = generateSitemap({
+  baseUrl: 'https://turnitgreen.eu', // Replace with your base URL
+  generateRobotsTxt: true, // Automatically generate a robots.txt file
+  exclude: ['/server-sitemap.xml'], // Exclude the generated sitemap file itself
+});
+
+export default sitemap;
