@@ -118,7 +118,7 @@ export async function getServerSideProps({ res }) {
   const data = await blogs.json();
   const sitemap = generateSiteMap(data);
 
-  res.setHeader("Content-Type", "text/xml; charset=UTF-8");
+  res.setHeader("Content-Type", "application/xml");
   res.write(sitemap);
   res.end();
 
