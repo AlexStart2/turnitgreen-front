@@ -38,6 +38,8 @@ function CardArticle({ Articles }) {
                         >
                             <div className={styles.img_container}>
                                 <Image
+                                    width={500}
+                                    height={500}
                                     className={styles.ArticlesImages}
                                     src={`https://drive.google.com/uc?id=${data.ImageId}`}
                                     alt={data.Title}
