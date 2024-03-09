@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import styles from '@/styles/CSRD-Calculator.module.css';
-import back from '@/public/icons8-меньше-чем-50.png'
+import back from '@/public/icons8-меньше-чем-50.png';
 import Image from 'next/image';
 
 

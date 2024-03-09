@@ -62,7 +62,7 @@ function Search() {
       <div className={styles.Blog}>
 
         {Articles.length === 0 || typeof Articles === 'undefined' ? <div className={styles.custom_loader}></div> :
-          searchQuery ? <CardArticle Articles={Display} /> : <CardArticle Articles={Articles} />}
+          searchQuery ? <CardArticle Articles={Display} /> : <CardArticle Articles={Articles}/>}
       </div>
 
     </>

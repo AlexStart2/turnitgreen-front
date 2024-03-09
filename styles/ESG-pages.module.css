@@ -54,6 +54,102 @@
     margin-bottom: 110px;
 }
 
+.buttonBack{
+    display: block;
+    background-color: transparent;
+    border: 2px solid #c0d7bd;
+    border-radius: 17px;
+    width: 2rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.back{
+    height: 1.2rem;
+    width: 1.2rem;
+    position: relative;
+    top:-2px;
+    left: -1px;
+    rotate:180deg;
+}
+
+.buttonBack:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #979a92;
+}
+
+.ESG_Digitalisation{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: fit-content;
+}
+
+
+.BoxFilter{
+    display: flex;
+    position: relative;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.filterBox{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: calc(80% );
+    font-size: 15px;
+}
+
+.filter{
+    margin-left: 2vw;
+    position: relative;
+    top: 2px;
+    border-radius: 7px;
+    font-size: 15px;
+    color: #979a92;
+    border-color:#979a92;
+}
+
+.description{
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Know{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    font-size: 2.5vh;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/*
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap: wrap;
+    height: fit-content;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 110px;
+*/
 
 @media screen and (max-width:1000px) {
     .ShortIntroduction_ESGKnowledge{
@@ -75,6 +171,9 @@
     .ShortIntroduction_ESGKnowledge{
         font-size: 2.3vh;
         line-height: 2.5vh;
+    }
+    .Know{
+        text-align: justify;
     }
 }
 

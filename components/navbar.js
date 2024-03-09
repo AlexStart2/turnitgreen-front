@@ -24,9 +24,9 @@ function NavigationBar() {
           </NavLink>
           <div id='nav-opt' className={`${isMobileMenuActive ?styles.navbar_options_active: styles.navbar_options}`}>
             <NavLink to='/' className={styles.navbar_button}>Home</NavLink>
-            <NavLink to='/ESG-knowledge' className={styles.navbar_button}>ESG Knowledge</NavLink>
-            <NavLink to='/ESG-updates' className={styles.navbar_button}>ESG Updates</NavLink>
-            <NavLink to='/Search' className={styles.navbar_button}>Search</NavLink>
+            <NavLink to='/ESG' className={styles.navbar_button}>ESG</NavLink>
+            <NavLink to='/digitalisation' className={styles.navbar_button}>Digitalisation</NavLink>
+            <NavLink to='/search' className={styles.navbar_button}>Search</NavLink>
             <div className={styles.navbar_button_last}>
               <button className={styles.GetInTouchButton} onClick={() => router.push('/about-us')}>
                 Get in Touch
