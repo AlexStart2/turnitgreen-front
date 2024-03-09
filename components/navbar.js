@@ -26,7 +26,7 @@ function NavigationBar() {
             <NavLink to='/' className={styles.navbar_button}>Home</NavLink>
             <NavLink to='/ESG' className={styles.navbar_button}>ESG</NavLink>
             <NavLink to='/digitalisation' className={styles.navbar_button}>Digitalisation</NavLink>
-            <NavLink to='/search' className={styles.navbar_button}>Search</NavLink>
+            <NavLink to='/Search' className={styles.navbar_button}>Search</NavLink>
             <div className={styles.navbar_button_last}>
               <button className={styles.GetInTouchButton} onClick={() => router.push('/about-us')}>
                 Get in Touch
