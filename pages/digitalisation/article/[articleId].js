@@ -94,8 +94,6 @@ function DigitArticle({ articleData }) {
 
       <div key={articleData._id} className={styles.ArticlePage}>
         <Image
-          width={500}
-          height={500}
           className={styles.ArticlePageImage}
           src={`https://drive.google.com/uc?id=${articleData.ImageId}`}
           alt={articleData.Title}

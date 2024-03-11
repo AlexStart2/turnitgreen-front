@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import ESG_Image from "@/public/ESGKnowledge.png";
+import ESG_Image from "@/public/Digitalisation.jpg";
 import CardArticle from "@/components/CARD-Articles";
 import Image from "next/image";
 import styles from "@/styles/ESG-pages.module.css";
