@@ -14,7 +14,7 @@ function Footer() {
         <div className={styles.cmp_footer}>
           <div className={styles.Copyright}>
 
-            Copyright © 2023 by Turn it green<br/><br/>
+            Copyright © 2024 by Turn it green<br/><br/>
             Regulatory information on this website is provided "as is" 
             for informational purposes only. While we take great care 
             in selecting sources, Turn it green assumes no responsibility 

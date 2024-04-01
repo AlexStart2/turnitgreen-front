@@ -9,56 +9,59 @@ import linkedInIcon from "@/public/icons8-linkedin-100.png";
 import { useRouter } from "next/router";
 
 export async function getStaticPaths() {
-    // Fetch the list of article IDs from your API
-    const response = await fetch('https://turnitgreen-03e15fdc97d7.herokuapp.com/get-article-ids/Digitalisation');
-    const { status, data, message } = await response.json();
+  // Fetch the list of article IDs from your API
+  const response = await fetch(
+    "https://turnitgreen-03e15fdc97d7.herokuapp.com/get-article-ids/ESG"
+  );
+  const { status, data, message } = await response.json();
 
-    if (status === 'ok') {
-      // Generate the paths based on the fetched article IDs
-      const paths = data.map(articleId => ({
-        params: { articleId },
-      }));
+  if (status === "ok") {
+    // Generate the paths based on the fetched article IDs
+    const paths = data.map((articleId) => ({
+      params: { articleId },
+    }));
 
-      return {
-        paths,
-        fallback: 'blocking', // 'blocking' allows Next.js to serve a static version while generating new pages
-      };
-    } else {
-      return {
-        paths: [],
-        fallback: 'blocking',
-      };
-    }
+    return {
+      paths,
+      fallback: "blocking", // 'blocking' allows Next.js to serve a static version while generating new pages
+    };
+  } else {
+    return {
+      paths: [],
+      fallback: "blocking",
+    };
   }
+}
 
-  export async function getStaticProps({ params }) {
-    const { articleId } = params;
+export async function getStaticProps({ params }) {
+  const { articleId } = params;
 
-    // Fetch article data from your API based on the articleId
-    const response = await fetch(`https://turnitgreen-03e15fdc97d7.herokuapp.com/get-article/${articleId}`);
-    const { status, data, message } = await response.json();
+  // Fetch article data from your API based on the articleId
+  const response = await fetch(
+    `https://turnitgreen-03e15fdc97d7.herokuapp.com/get-article/${articleId}`
+  );
+  const { status, data, message } = await response.json();
 
-    if (status === "ok") {
-      return {
-        props: {
-          sitemap: {
-            // Add the sitemap property to the returned object
-            paths: ['/'], // Include the base URL in the sitemap
-            // You can also specify other dynamic pages to include here
-          },
-          articleData: data,
+  if (status === "ok") {
+    return {
+      props: {
+        sitemap: {
+          // Add the sitemap property to the returned object
+          paths: ["/"], // Include the base URL in the sitemap
+          // You can also specify other dynamic pages to include here
         },
-        revalidate: 600, // Automatically re-render every 600 seconds
-
-      };
-    } else {
-      return {
-        notFound: true,
-      };
-    }
+        articleData: data,
+      },
+      revalidate: 600, // Automatically re-render every 600 seconds
+    };
+  } else {
+    return {
+      notFound: true,
+    };
   }
+}
 
-function DigitArticle({ articleData }) {
+function Article({ articleData }) {
   const router = useRouter();
   const postUrl = encodeURI("https://turnitgreen.eu" + router.asPath);
   return (
@@ -67,7 +70,7 @@ function DigitArticle({ articleData }) {
         <title>{articleData.Title}</title>
         <meta
           name="description"
-          content={articleData.Content.substring(0, 400)}
+          content={articleData.Summary || articleData.Content.substring(0, 400)}
         />
         <meta property="og:title" content={articleData.Title} />
         <meta
@@ -163,4 +166,4 @@ function DigitArticle({ articleData }) {
   );
 }
 
-export default DigitArticle;
+export default Article;

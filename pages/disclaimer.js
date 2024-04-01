@@ -13,7 +13,7 @@ function Disclaimer() {
             <div className={styles.disclaimer_box}>
                 <h2>Disclaimer</h2>
                 <div className={styles.disclaimer_content}>
-                    Last Updated: 03.11.2023 <br /><br />
+                    Last Updated: 25.03.2024 <br /><br />
                     <strong>1. Introduction</strong><br />
                     Welcome to Turn It Green. The information provided on this website is for general informational
                     purposes only. By accessing or using our website, you acknowledge and agree to the terms of this

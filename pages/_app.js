@@ -11,11 +11,11 @@ export default function App({ Component, pageProps }) {
         <link rel="apple-touch-icon" href="/icon_turnitgreen.png" />
         <meta name="robots" content="index, follow" />
         <title>Turn it Green</title>
-        <script
+        <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2369548664184683"
           crossorigin="anonymous"
-        ></script>
+        ></Script>
       </Head>
       <Layout>
         <Component {...pageProps} />

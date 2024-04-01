@@ -32,6 +32,9 @@ function CardArticle({ Articles }) {
           if(data.ArticleType==='Digitalisation Knowledge' || data.ArticleType==='Digitalisation Updates'){
             Type = 'digitalisation';
           }
+          if(data.ArticleType==='ESG Knowledge' || data.ArticleType==='ESG Updates'){
+            Type = 'ESG';
+          }
             
           return (
             <div

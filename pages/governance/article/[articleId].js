@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 
 export async function getStaticPaths() {
     // Fetch the list of article IDs from your API
-    const response = await fetch('https://turnitgreen-03e15fdc97d7.herokuapp.com/get-article-ids/Digitalisation');
+    const response = await fetch('https://turnitgreen-03e15fdc97d7.herokuapp.com/get-article-ids/Governance');
     const { status, data, message } = await response.json();
 
     if (status === 'ok') {
@@ -58,7 +58,7 @@ export async function getStaticPaths() {
     }
   }
 
-function DigitArticle({ articleData }) {
+function GovernanceArticle({ articleData }) {
   const router = useRouter();
   const postUrl = encodeURI("https://turnitgreen.eu" + router.asPath);
   return (
@@ -97,9 +97,6 @@ function DigitArticle({ articleData }) {
           className={styles.ArticlePageImage}
           src={`https://drive.google.com/uc?id=${articleData.ImageId}`}
           alt={articleData.Title}
-          width={4000}
-          height={1000}
-          priority={1}
         />
         <div className={styles.ArticlePageTitle}>
           <p className={styles.ArticleTitle}>{articleData.Title}</p>
@@ -163,4 +160,4 @@ function DigitArticle({ articleData }) {
   );
 }
 
-export default DigitArticle;
+export default GovernanceArticle;
