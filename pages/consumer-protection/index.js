@@ -40,11 +40,11 @@ function ConsumerProtection() {
         </div>
       </div>
 
-      {/* <div className={styles.Blog}>
+      <div className={styles.Blog}>
         <CardArticle
           Articles={ Gov_Articles }
         />
-      </div> */}
+      </div>
     </>
   );
 }

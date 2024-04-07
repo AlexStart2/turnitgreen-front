@@ -10,7 +10,7 @@ import { useState } from "react";
 function CapitalAdequacy() {
   const Articles = GetArticles();
   const [selectedValue, setSelectedValue] = useState("Capital Adequacy"); 
-  const Gov_Articles = Articles.filter((article) => {
+  const CapitalAdequacyArticles = Articles.filter((article) => {
     if (
       article.ArticleType &&
       article.ArticleType !== null &&
@@ -40,11 +40,11 @@ function CapitalAdequacy() {
         </div>
       </div>
 
-      {/* <div className={styles.Blog}>
+      <div className={styles.Blog}>
         <CardArticle
-          Articles={ Gov_Articles }
+          Articles={ CapitalAdequacyArticles }
         />
-      </div> */}
+      </div>
     </>
   );
 }

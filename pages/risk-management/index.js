@@ -40,11 +40,11 @@ function RiskManagement() {
         </div>
       </div>
 
-      {/* <div className={styles.Blog}>
+      <div className={styles.Blog}>
         <CardArticle
           Articles={ Digi_Articles }
         />
-      </div> */}
+      </div>
     </>
   );
 }

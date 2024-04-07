@@ -1,7 +1,6 @@
 import styles from '@/styles/footer.module.css';
 import React from 'react';
 import NavLink from './NavLink';
-import 'bootstrap/dist/css/bootstrap.css';
 
 
 function Footer() {

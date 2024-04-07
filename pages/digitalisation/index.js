@@ -40,31 +40,6 @@ function Digitalisation() {
         </div>
       </div>
 
-      <div className={styles.BoxFilter}>
-        <div className={styles.filterBox}>
-          Filter by:
-          <select
-            className={styles.filter}
-            value={selectedValue}
-            onChange={handleChange}
-          >
-            <option value="Digitalisation">All</option>
-            <option
-              value="Digitalisation Knowledge"
-              title="A comprehensive library of resources where you'll find in-depth information, explanations, and guidance on a variety of topics."
-            >
-              Knowledge Hub
-            </option>
-            <option
-              value="Digitalisation Updates"
-              title="A section dedicated to providing the latest news, trends, and analysis, keeping you informed about important developments in the field."
-            >
-              Recent Updates
-            </option>
-          </select>
-        </div>
-      </div>
-
       <div className={styles.Blog}>
         <CardArticle
           Articles={ Digi_Articles }

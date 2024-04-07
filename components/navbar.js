@@ -1,8 +1,6 @@
 import styles from "@/styles/navbar.module.css";
 import logo from "@/public/Teal Illustrated Iceberg Graph Concept Map Graph.png";
 import Image from "next/image";
-import "bootstrap/dist/css/bootstrap.css";
-
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -23,19 +21,20 @@ function OffcanvasExample() {
   
   const expand = "md";
   const isSmallScreen = useMediaQuery({ query: "(max-width: 767px)" });
-  var borderBottom = isSmallScreen ? "2px solid #c1f036" : "unset";
+  var border_bottom = isSmallScreen ? "2px solid #c1f036" : "unset";
 
+  //////////////////////////////////////////////////////////////////////////////////////////////  WARNING!!
   return (
     <>
       <Navbar
         key={expand}
         expand={expand}
-        className="bg-body-tertiary"
-        style={{ "--bs-bg-opacity": "unset", "--bs-navbar-padding-x": "unset" }}
+        className=" bg-body-tertiary "
+        style={{ "--bs-bg-opacity": "unset", "--bs-navbar-padding-x": "unset", borderBottom: "1px solid #c2c2c2" }}
       >
         <Container fluid>
           <Navbar.Brand>
-            <Nav.Link href="/">
+            <Nav.Link href="/">             
               <Image
                 src={logo}
                 priority={true}
@@ -49,7 +48,6 @@ function OffcanvasExample() {
             id={`offcanvasNavbar-expand-${expand}`}
             aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
             placement="end"
-            style={{ width: "80vw" }}
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
@@ -63,9 +61,9 @@ function OffcanvasExample() {
                   style={{
                     paddingLeft: "3vw",
                     paddingRight: "3vw",
-                    borderBottom: borderBottom,
+                    borderBottom: border_bottom,
                   }}
-                  className={styles.navbar_option}
+                  className=" h-100 "
                 >
                   <div className={styles.pad}>Home</div>
                 </Nav.Link>
@@ -74,9 +72,9 @@ function OffcanvasExample() {
                   style={{
                     paddingLeft: "3vw",
                     paddingRight: "3vw",
-                    borderBottom: borderBottom,
+                    borderBottom: border_bottom,
                   }}
-                  className={styles.navbar_option}
+                  className=" h-100 "
                 >
                   <div>Search</div>
                 </Nav.Link>
@@ -90,7 +88,6 @@ function OffcanvasExample() {
                     paddingRight: "3vw",
                     borderBottom: "unset",
                   }}
-                  className={styles.navbar_option}
                 >
                   <NavDropdown.Item href="/ESG">ESG</NavDropdown.Item>
                   <NavDropdown.Divider />

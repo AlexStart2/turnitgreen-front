@@ -5,25 +5,9 @@ import CardArticle from "@/components/CARD-Articles";
 import Image from "next/image";
 import styles from "@/styles/ESG-pages.module.css";
 import { GetArticles } from "@/components/getArticles";
-import { useState } from "react";
 
 function ESG() {
-  const Articles = GetArticles();
-  const [selectedValue, setSelectedValue] = useState("ESG"); // Initial value
-
-  const handleChange = (event) => {
-    setSelectedValue(event.target.value);
-  };
-  const ESG_Articles = Articles.filter((article) => {
-    if (
-      article.ArticleType &&
-      article.ArticleType !== null &&
-      article.ArticleType !== undefined
-    ) {
-      return article.ArticleType.includes(selectedValue);
-    }
-    return false;
-  });
+  const ESG_Articles = GetArticles().filter((article)=>article.ArticleType === "ESG Knowledge" || article.ArticleType === "ESG Updates");
 
   return (
     <>
@@ -35,31 +19,6 @@ function ESG() {
           </h1>
           <br />
           Unlocking potential, responsibly.
-        </div>
-      </div>
-
-      <div className={styles.BoxFilter}>
-        <div className={styles.filterBox}>
-          Filter by:
-          <select
-            className={styles.filter}
-            value={selectedValue}
-            onChange={handleChange}
-          >
-            <option value="ESG">All</option>
-            <option
-              value="ESG Knowledge"
-              title="A comprehensive library of resources where you'll find in-depth information, explanations, and guidance on a variety of topics."
-            >
-              Knowledge Hub
-            </option>
-            <option
-              value="ESG Updates"
-              title="A section dedicated to providing the latest news, trends, and analysis, keeping you informed about important developments in the field."
-            >
-              Recent Updates
-            </option>
-          </select>
         </div>
       </div>
 
