@@ -7,7 +7,7 @@ import styles from "@/styles/ESG-pages.module.css";
 import { GetArticles } from "@/components/getArticles";
 
 function ESG() {
-  const ESG_Articles = GetArticles().filter((article)=>article.ArticleType === "ESG Knowledge" || article.ArticleType === "ESG Updates");
+  const ESG_Articles = GetArticles().filter((article)=>article.ArticleType === "ESG");
 
   return (
     <>

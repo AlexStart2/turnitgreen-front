@@ -61,7 +61,7 @@ function Article({ articleData }) {
           <div className={styles.ArticleAndHr}>
             <div
               className={styles.ArticlePageContent}
-              dangerouslySetInnerHTML={{ __html: articleData.Content }}
+              dangerouslySetInnerHTML={{ __html: articleData.Content.replace(/<p/g, '<p style="margin-bottom: 0;"') }}
             ></div>
             <hr className={styles.ArticleEnd} />
             <div className={styles.option_btn_container}>
