@@ -89,7 +89,7 @@ function OffcanvasExample() {
                     borderBottom: "unset",
                   }}
                 >
-                  <NavDropdown.Item href="/ESG">ESG</NavDropdown.Item>
+                  <NavDropdown.Item href="/esg">ESG</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="/digitalisation">
                     Digitalisation
