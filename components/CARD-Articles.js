@@ -22,12 +22,14 @@ function CardArticle({ Articles }) {
     });
   }, [Articles]);
 
+  const sortedArticles = [...Articles].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
   return (
     <>
       {Articles.length === 0 || typeof Articles === "undefined" ? (
         <div className={styles.custom_loader}></div>
       ) : (
-        Articles.map((data) => {
+        sortedArticles.map((data) => {
           const Type = data.ArticleType.toLowerCase().replace(" ","-");
           
           return (

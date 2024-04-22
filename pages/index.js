@@ -1,5 +1,5 @@
 import styles from "@/styles/Home.module.css";
-import React from "react";
+import React, { useState } from "react";
 import StartImage from "@/public/HomePageImage.png";
 import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.css";
@@ -7,9 +7,24 @@ import { GetArticles } from "@/components/getArticles";
 import { CSRDcalculator } from "@/components/CSRD-Calculator";
 import CardArticle from "@/components/CARD-Articles";
 import Head from "next/head";
+import { Button } from "react-bootstrap";
+import NewsletterSubmission from "@/components/Newsletter-Subscription";
 
 function Home() {
-  const RecentArticles = GetArticles().slice(0, 6);
+  const Articles = GetArticles();
+
+  const [showNewsletterForm, setShowNewsletterForm] = useState(false);
+
+  const handleSubscribeClick = () => {
+    setShowNewsletterForm(true);
+  };
+
+  const handleFormClose = () => {
+    setShowNewsletterForm(false);
+  };
+  const sortedArticles = [...Articles].sort(
+    (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+  );
 
   return (
     <>
@@ -46,9 +61,26 @@ function Home() {
           positive impact.
           <br />
           <br />
-          <strong>Empowering businesses to make a positive difference.</strong>
+          <Button
+            style={{
+              backgroundColor: "#C1F036",
+              color: "black",
+              fontFamily: "Arial",
+              boxShadow: "none",
+              border: "none"
+            }}
+            onMouseEnter={(e) => e.target.style.boxShadow = "0 0 30px rgba(0, 0, 0, 0.5)"}
+            onMouseLeave={(e) => e.target.style.boxShadow = "none"}
+            onClick={handleSubscribeClick}
+          >
+            <strong>Subscribe to our monthly newsletter</strong>
+          </Button>
         </div>
       </div>
+
+      {showNewsletterForm && (
+        <NewsletterSubmission onClose={handleFormClose} /> // Pass close function as a prop
+      )}
 
       <div className={styles.HomePage_Content}>
         <div className={styles.CSRDcalculator}>
@@ -63,7 +95,7 @@ function Home() {
         <div className={styles.Recent}>
           <div className={styles.T_Recent}>Recent</div>
           <div className={styles.Blog}>
-            <CardArticle Articles={RecentArticles} />
+            <CardArticle Articles={sortedArticles.slice(0, 6)} />
           </div>
         </div>
       </div>
